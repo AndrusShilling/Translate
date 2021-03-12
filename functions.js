@@ -1,4 +1,10 @@
 var table = document.getElementById("myTable");
+if (typeof(Storage) !== "undefined") {
+    if (localStorage.table) {
+        table.innerHTML = localStorage.table;
+
+    }
+}
 
 function callback(word, translation) {
     console.log(word, translation);
@@ -9,6 +15,7 @@ function callback(word, translation) {
     cell1.innerHTML = word;
     cell2.innerHTML = "literally means";
     cell3.innerHTML = translation
+    localStorage.table = table.innerHTML;
 
 }
 

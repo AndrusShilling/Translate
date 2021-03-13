@@ -1,0 +1,67 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="bootstrap.css">
+
+<body>
+    <div class="card shadow">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-12 d-flex">
+                    <h3 class="col-md-6">Translate</h3>
+                    <button data-toggle="modal" data-target="#textModal" type="button"
+                        class="ml-auto btn btn-light btn-sm">
+                        <i class="fa fa-plus"></i> Add Words
+                    </button>
+                    <button onClick = "exportTableToCSV('download.csv')"
+                        class="btn btn-light btn-sm">
+                        <i class="fa fa-download" aria-hidden="true"></i> 
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="myTable" class="table align-items-center table-flush">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Word</th>
+                        <th scope="col"></th>
+                        <th scope="col">Meaning</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="textModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Translate Words</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" id="textareaInput" rows="8" cols="50"
+                        placeholder="Enter words to translate, seperated by commas."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button onclick="myFunction()" type="button" class="btn btn-primary" data-dismiss="modal">Translate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="script.php"></script>
+    <script src="functions.js"></script>
+</body>

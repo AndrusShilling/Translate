@@ -54,7 +54,30 @@
 				</div>
 				<div class="modal-body">
 					<textarea class="form-control" id="textareaInput" rows="8" cols="50"
-						placeholder="Enter words to translate, seperated by commas."></textarea>
+						placeholder="Enter words to translate, seperated by commas."></textarea><br>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-sm">
+								<label>From:</label>
+								<select class="selectpicker myClass show-tick dropup" data-dropupAuto="true"
+									data-container="#mainContainer" id="from" data-width="90%">
+									<option value="0">English</option>
+									<option value="3" selected="selected">Spanish</option>
+									<option value="1">French</option>
+								</select>
+							</div>
+							<div class="col-sm">
+								<label>To:</label>
+								<select class="selectpicker myClass show-tick dropup" data-dropupAuto="true"
+									data-container="#mainContainer" id="to" data-width="90%">
+									<option value="0">English</option>
+									<option value="3">Spanish</option>
+									<option value="1">French</option>
+								</select>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

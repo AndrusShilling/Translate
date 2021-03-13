@@ -20,7 +20,7 @@ function myFunction() {
 	words = input.value.split(",");
 	for (i in words) {
 		var translator = new babylonTranslator();
-		translator.translate(3, 0, words[i], 'callback');
+		translator.translate(document.getElementById("from").value, document.getElementById("to").value, words[i], 'callback');
 	}
 	input.value = "";
 }

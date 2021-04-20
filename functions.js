@@ -10,7 +10,7 @@ function callback(word, translation) {
 	var row = table.insertRow();
 	var cell = row.insertCell(0);
 	var translationFormatted = translation.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "").replace(/\s\s+/g, ' ').replace(/\r\n|\n|\r|\t\+/g, ';').replace(' &nbsp; ', '; ');
-	cell.innerHTML = "Literally " + "'" + word + "'" + " means " + '"' + translationFormatted + '"';
+	cell.innerHTML = "Literally " + "‘" + word + "’" + " means " + '“' + translationFormatted + '”';
 	console.log(translationFormatted)
 	localStorage.table = table.innerHTML;
 }
